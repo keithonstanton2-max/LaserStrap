@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Remove global.json to use the specified SDK version
+      run: rm -f global.json
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
